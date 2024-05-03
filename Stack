@@ -1,0 +1,33 @@
+import java.util.*;
+public class stackimplementation {    
+    public static void main(String[] args) {        
+        Scanner sc=new Scanner(System.in);
+        Stack<Integer> stack=new Stack<>();
+        System.out.println("Empty Stack: "+stack);
+        //checking if stack is empty
+        System.out.println("Empty Stack: "+stack.isEmpty());
+        //Adding elements
+        stack.push(10);
+        stack.push(11);
+        stack.push(12);
+        stack.push(13);
+        stack.push(14);
+        //to display the stack
+        System.out.println("The Stack is: "+stack);
+        //pop operation LIFO so 14 is popped
+        System.out.println("The poped element is:"+stack.pop()); 
+        //enna element pop pannirukum dratha kuda dispaly pannlam using above method
+        System.out.println("After Pop Operation the stack is"+stack);
+        //searching
+        System.out.print("Enter the element to Search:");
+        int sea=sc.nextInt();
+        System.out.println("Search Operation "+stack.search(sea));
+        //ithu ethuku
+        System.out.println("The stack is empty T/F??  "+stack.isEmpty());
+        //peek to dispaly the top element without removing it
+        System.out.println("The top element is:"+stack.peek()); 
+
+    }
+}
+
+
