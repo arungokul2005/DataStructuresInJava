@@ -1,0 +1,54 @@
+public class string {
+    public static void main(String[] args) {
+        //string intialization
+        String str1="abcdef";
+        //to find the length
+        System.out.println(str1.length());
+        //substring python la slicing use pannuvom la athu mari than
+        String str2=str1.substring(1);
+        System.out.println(str2);
+        String str3=str1.substring(1,4);
+        System.out.println(str3);
+        //concatenation
+        String str4= "ghijk";
+        str4=str4.concat(str1);       
+        System.out.println(str4);
+        //searching ana true false than return pannum ibf:contains
+        System.out.println(str1.contains("ab"));
+        //ends with ibf:endsWith
+        System.out.println(str1.endsWith("f"));
+        System.out.println(str1.endsWith("a"));
+        //starts with ibf:startsWith
+        System.out.println(str1.startsWith("a"));
+        System.out.println(str1.startsWith("f"));
+        String str5="abcdef";
+        System.out.println(str1.equals(str5));
+        System.out.println(str1.equals(str3));
+        //to get index of a char or substring ibf:indexOf()
+        int i=str1.indexOf("b");
+        System.out.println(i);    
+        //ithu enna pramatha itha vida special item onnu iruku 
+        System.out.println(str1.indexOf("c",2));    
+        //athavathu namma soldra element namma soldra position la iruntha antha position ahh returnn pannum illa na -1 ahh return pannum
+        int j=str1.indexOf("def") ;
+        System.out.println(j);
+        //empty ahh illa ya nu check panna ibf:isEmpty()
+        String str6="";
+        System.out.println(str6.isEmpty());
+        System.out.println(str1.isEmpty());
+        //givev char oda last appearance position ahh return pannum  
+        String str7="aaaa";
+        int k=str7.lastIndexOf("a");
+        System.out.println(k);
+        //replace
+        System.out.println(str7.replaceAll("a","e"));
+        //upper and lower case
+        System.out.println(str7.toUpperCase());
+        System.out.println(str7.toLowerCase());
+        String str8="aa                      ";
+        System.out.println(str8+"aaaa");
+        System.out.println(str8.trim()+"aaaa");
+
+
+
+    }}
