@@ -36,11 +36,26 @@ public class linkedlist {
         System.out.println (numlist);
         //linked list ahh array va mathurom     
         ArrayList<Integer> arr1=new ArrayList<Integer>();
-        for(int i:numlist){
+        for(int i:numlist)
+        {
             arr1.add(i);
-        }    System.out.print(numlist);
-
-
-    }}
-   
-
+        }    
+        System.out.print(numlist);
+        //Searching
+        LinkedList<Integer> list=new LinkedList<Integer>();
+        Scanner sc = new Scanner(System.in)
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        System.out.print("Enter the element to search:");
+        int ele=sc.nextInt();
+        if(list.contains(ele))
+        {
+            System.out.println("The position of element is :"+(list.indexOf(ele)+1));
+        }
+        else
+        {
+             System.out.println("Not exist");
+        }
+}
+}
