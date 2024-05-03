@@ -1,0 +1,22 @@
+import java.util.*;
+public class vector {
+    public static void main(String[] args) {
+        Vector<String> vec=new Vector<String>();
+        vec.add("arun");
+        vec.add("runa");
+        vec.add("unar");
+        vec.add("naru");
+        vec.add("arun");
+        Collection<String> c=new ArrayList<String>();
+        c.add("runa");
+        c.add("unar");
+        c.add("naru");
+        c.add("arun");
+            vec.addAll(c);
+        System.out.println(vec);
+        System.out.println(vec.capacity());
+        Object veccopy=vec.clone();
+        System.out.println(veccopy);
+        
+    
+}}
