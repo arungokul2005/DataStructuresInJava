@@ -1,0 +1,53 @@
+class Node{
+    int data;
+    Node left;
+    Node right;
+    Node(int v) {
+        this.data=v;
+        this.left=this.right=null;
+    }
+}
+class binarysearchtree{
+    public static void printInorder(Node node) {
+        if(node==null)
+            return;
+        printInorder(node.left);
+        System.out.print(node.data+" ");
+        printInorder(node.right);
+    }
+    
+    public static void printpreorder(Node node) {
+        if(node==null)
+            return;
+        System.out.print(node.data+" ");
+        printpreorder(node.left);
+        printpreorder(node.right);
+    }
+    
+    public static void printpostorder(Node node) {
+        if(node==null)
+            return;
+        printpostorder(node.left);
+        printpostorder(node.right);
+        System.out.print(node.data+" ");
+    }
+    
+    public static void main(String[] args) {
+        Node root=new Node(100);
+        root.left=new Node(20);
+        root.right=new Node(200);
+        root.left.left=new Node(10);
+        root.left.right=new Node(30);
+        root.right.left=new Node(150);
+        root.right.right=new Node(300);  
+        System.out.println(" Inorder traversal");
+        printInorder(root); 
+        System.out.println();
+        System.out.println(" Preorder traversal");
+        printpreorder(root);
+        System.out.println();
+        System.out.println(" Postorder traversal");
+        printpostorder(root);
+    }
+
+}
