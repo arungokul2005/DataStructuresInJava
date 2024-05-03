@@ -1,0 +1,72 @@
+public class exceptionhandling {
+    public static void main(String[] args) 
+    {
+        //simple try catch block
+        
+        try
+        {
+            int data=100/0;
+            System.out.println(data);
+        }
+        catch(Exception e) 
+        {
+            System.out.println(e);
+        }
+
+        //Try with multiple catch block
+
+        try
+        {
+            int a[]=new int[5];
+            a[5]=30/2;
+            a[5]=a[6];
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Arithmetic exception");
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("ArrayIndexOutOfBoundsException");
+        }
+        catch(Exception e) 
+        {
+            System.out.println("Parent Exception");
+        }
+        System.out.println("Patharatha Ella block um run agidhuchu ");   
+        
+        //Nested Try  Block
+        
+        try
+        {
+            try
+            {
+                //System.out.println("going to divide");
+                //int b=3/3 ;
+            }
+            catch(ArithmeticException e)
+            {
+                System.out.println(e);
+            }
+            try
+            {
+                int a[]=new int[5];
+                a[1]=4;
+            }
+            catch(ArrayIndexOutOfBoundsException e)
+            {
+                System.out.println(e);
+            }            
+        }
+        catch(Exception e)
+        {
+            System.out.println("Handled");
+        }        
+        finally
+        {
+            System.out.println("Finally Inner Peace");
+        }
+        
+
+    }
+}
