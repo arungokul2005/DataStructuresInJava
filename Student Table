@@ -1,0 +1,58 @@
+import java.util.*;
+class Student
+{
+    int rollno;
+    String name,address;
+    public Student(int rollno,String name,String address)
+    {
+        this.rollno=rollno;
+        this.name=name;
+        this.address=address;
+    }
+    public String toString()
+    {
+        return this.rollno+" "+this.name+" "+this.address;
+    }
+}
+class SortbyRoll implements Comparator<Student>
+{
+    public int compare(Student a,Student b)
+    {
+        return a.rollno-b.rollno;
+    }
+}
+class SortbyName implements Comparator<Student>
+{
+    public int compare(Student a,Student b)
+    {
+        return a.name.compareTo(b.name);
+    }
+}
+class Main
+{
+    public static void main(String[] args) 
+    {
+        ArrayList<Student> ar=new ArrayList<Student>();
+        ar.add(new Student(103,"luna","chennai"));
+        ar.add(new Student(108,"deepak","mars"));
+        ar.add(new Student(106,"nila","jupyter"));
+        ar.add(new Student(101,"arun","uranus"));
+        System.out.println("unsorted");
+        for(int i=0;i<ar.size();i++)
+        {
+            System.out.println(ar.get(i));
+        }
+        Collections.sort(ar, new SortbyRoll());
+        System.out.println("sorted by rollno");
+        for(int i=0;i<ar.size();i++)
+        {
+            System.out.println(ar.get(i));
+        }
+        Collections.sort(ar, new SortbyName());
+        System.out.println("sorted by name");
+        for(int i=0;i<ar.size();i++)
+        {
+            System.out.println(ar.get(i));
+        }
+    } 
+}
