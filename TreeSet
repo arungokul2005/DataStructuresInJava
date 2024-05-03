@@ -1,0 +1,19 @@
+import java.util.*;
+public class Treeset {
+    public static void main(String[] args) {
+        TreeSet<Integer> treeset=new TreeSet<Integer>();
+        treeset.add(3);
+        treeset.add(2);
+        treeset.add(1);
+        System.out.println(treeset);
+        NavigableSet<Integer> trev=treeset.descendingSet();
+        Iterator<Integer> iterator = trev.iterator();
+        while(iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+        System.out.println(treeset.pollLast());
+        System.out.println(treeset);
+        System.out.println(treeset.pollFirst());
+        System.out.println(treeset);
+    }
+}
