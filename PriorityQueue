@@ -1,0 +1,46 @@
+import java.util.*;
+public class priorityqueue {
+    public static void main(String[] args) {
+        PriorityQueue<Integer> pq=new PriorityQueue<Integer>();
+        pq.add(7);
+        pq.add(6);
+        pq.add(5);
+        pq.add(4);
+        pq.add(3);
+        pq.add(2);
+        pq.add(1);
+        System.out.println(pq);
+        //to display the top element
+        System.out.println(pq.peek());
+        //to display and remove the top element             //itho paru priority queue kull epdi vena irukalma
+        System.out.println(pq.poll());                      //but unaku vela varum bothu pakka va ascending order la varum
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
+        System.out.println(pq.poll());
+        System.out.println(pq);
+        //again to display th top element
+        System.out.println(pq.peek());
+        pq.add(7);
+        pq.add(6);
+        pq.add(5);
+        pq.add(4);
+        pq.add(3);
+        pq.add(2);
+        pq.add(1);
+        Iterator<Integer> iter=pq.iterator();
+        while(iter.hasNext()){
+            System.out.print(iter.next()+" ");
+        } 
+
+        
+    }
+}
